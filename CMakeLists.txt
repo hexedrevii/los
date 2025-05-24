@@ -9,6 +9,7 @@ add_executable(${PROJECT_NAME}
   los/user.cpp
 
   los/release.cpp
+  los/kernel.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE

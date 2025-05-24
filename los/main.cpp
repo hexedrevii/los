@@ -1,3 +1,4 @@
+#include "kernel.h"
 #include "release.h"
 #include "user.h"
 #include <optional>
@@ -10,5 +11,8 @@ int main()
   std::optional<const std::string> hname = los::get_hostname();
 
   if (uname && hname) std::println("{}@{}", *uname, *hname);
-  std::println("{}", los::get_release());
+  std::println("\n{}", los::get_release());
+
+  if (std::optional<const std::string> kernel = los::kernel())
+    std::println("{}", *kernel);
 }
