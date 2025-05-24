@@ -5,7 +5,7 @@ l(o)s, show your OS and Kernel Version.
 ![los](./los.png)
 
 > [!NOTE]
-> You can add -n to show your username and hostname
+> You can add -n to show your username and hostname <br>
 > Format: {user}@{host}
 
 ## Install
