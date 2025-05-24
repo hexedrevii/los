@@ -7,6 +7,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(${PROJECT_NAME}
   los/main.cpp
   los/user.cpp
+
+  los/release.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
