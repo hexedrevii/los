@@ -17,6 +17,9 @@ Before we compile and install we need a few apps: git, cmake, ninja, gcc and g++
 # Ubuntu/Debian
 sudo apt install build-essential git cmake ninja-build gcc g++
 
+# If using Ubuntu 24.04 or earlier you will need to install gcc-14 separately.
+sudo apt install build-essential git cmake ninja-build gcc-14 g++-14
+
 # Fedora/Rocky/Alma
 sudo dnf in git cmake ninja gcc gcc-g++
 
@@ -35,11 +38,12 @@ cd los
 
 Now, we can compile the app.
 ```bash
-export CC=gcc
-export CXX=g++
-
 mkdir build; cd build
-cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=23
+cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++
+
+# For ubuntu 24.04 and earlier users:
+cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++-14
+
 
 ninja
 ```
